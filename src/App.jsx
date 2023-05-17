@@ -123,7 +123,7 @@ function App() {
                           id={id}
                         />
                       ) : (
-                        <div className="inline-block bg-gray-50 shadow rounded py-2 px-3 m-2">
+                        <div className="md:break-words break-all inline-block bg-gray-50 shadow rounded py-2 px-3 m-2">
                           {title}
                         </div>
                       )}
@@ -154,7 +154,7 @@ function App() {
                         </div>
                       )}
                       <button
-                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full m-1"
+                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full m-1 h-12"
                         onClick={async () => {
                           if (editMode) {
                             const val = Number(progress);
@@ -184,7 +184,7 @@ function App() {
                         {editMode ? "save" : "edit"}
                       </button>
                       <button
-                        className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full m-1"
+                        className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full m-1 h-12"
                         onClick={async () => {
                           await removeTodo(id);
                         }}
