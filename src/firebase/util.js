@@ -13,7 +13,7 @@ export const uploadTodo = async (todo) => {
     new Date().getTime().toString(36) + Math.random().toString(36).slice(2);
 
   await updateDoc(ref, {
-    [`todos.${id}`]: {...todo, id}
+    [`todos.${id}`]: {...todo, id, editMode: false}
   });
 };
 
@@ -34,5 +34,5 @@ export const removeTodo = async (id) => {
 export const editTodo = async (id, editedTodo) => {
   const ref = doc(db, "todos", "root");
 
-  await updateDoc(ref, {[`todos.${id}`]: editedTodo})
+  await updateDoc(ref, {[`todos.${id}`]: {...editedTodo, editMode: false}})
 }
