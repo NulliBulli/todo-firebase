@@ -1,6 +1,5 @@
 ## How to run:
 
-    $ cd todo
     $ npm install
     $ npm run dev
 
